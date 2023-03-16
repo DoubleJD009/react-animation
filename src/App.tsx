@@ -31,19 +31,15 @@ const Circle = styled(motion.div)`
 
 const boxVariants: Variants = {
   start: {
-    opacity: 0,
-    scale: 0.5,
+    opacity: 1,
+    scale: 0,
   },
   end: {
-    scale: 1,
     opacity: 1,
+    scale: 1,
     transition: {
-      type: "spring",
-      duration: 0.7,
-      bounce: 0.5,
-      delay: 0.5,
-      delayChildren: 0.8, //자식 요소 딜레이
-      staggerChildren: 0.2, //자식 요소의 각각의 딜레이
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -51,11 +47,15 @@ const boxVariants: Variants = {
 const circleVariants: Variants = {
   start: {
     opacity: 0,
-    y: 10,
+    y: 20,
   },
   end: {
     opacity: 1,
     y: 0,
+    // transition: {
+    //   type: "spring",
+    //   bounce: 1,
+    // },
   },
 };
 
